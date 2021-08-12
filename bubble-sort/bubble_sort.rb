@@ -1,5 +1,5 @@
 def bubble_sort(array)
-  n = array.length - 2
+  n = array.length - 1
   sorted = false
   until sorted
     sorted = true
@@ -13,4 +13,6 @@ def bubble_sort(array)
 end
 
 p bubble_sort([4, 3, 78, 2, 0, 2])
+p bubble_sort([4, 3])
+p bubble_sort([4])
 p bubble_sort([-4, 3, 78, -2, 0, 2])
