@@ -3,7 +3,7 @@ def bubble_sort(array)
   sorted = false
   until sorted
     sorted = true
-    (0..n).each do |i|
+    n.times do |i|
       array[i], array[i + 1] = array[i + 1], array[i] if array[i] > array[i + 1]
       sorted = false
     end
