@@ -1,11 +1,11 @@
 def bubble_sort(array)
   n = array.length - 2
-  completed_flag = false
-  until completed_flag
-    completed_flag = true
+  sorted = false
+  until sorted
+    sorted = true
     (0..n).each do |i|
       array[i], array[i + 1] = array[i + 1], array[i] if array[i] > array[i + 1]
-      completed_flag = false
+      sorted = false
     end
     n -= 1
   end
