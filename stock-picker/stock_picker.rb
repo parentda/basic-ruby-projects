@@ -1,18 +1,18 @@
 def stock_picker(stock_price_array)
   min_price = { value: stock_price_array[0], index: 0 }
   max_profit = 0
-  days = [0, 0]
+  buy_sell_days = [0, 0]
 
   stock_price_array.each_with_index do |stock_price, index|
     if stock_price < min_price[:value]
       min_price[:value] = stock_price
       min_price[:index] = index
     elsif stock_price - min_price[:value] > max_profit
-      days = [min_price[:index], index]
+      buy_sell_days = [min_price[:index], index]
       max_profit = stock_price - min_price[:value]
     end
   end
-  days
+  buy_sell_days
 end
 
 p stock_picker([17, 3, 6, 9, 15, 8, 6, 1, 10])
