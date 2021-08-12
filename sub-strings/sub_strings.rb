@@ -1,14 +1,11 @@
 def substrings(string, dictionary)
   lowercase_string = string.downcase
 
-  output =
-    dictionary.reduce({}) do |accum, word|
-      instances = lowercase_string.scan(word.downcase).size
-      accum[word] = instances if instances.positive?
-      accum
-    end
-
-  puts output
+  dictionary.reduce({}) do |accum, word|
+    instances = lowercase_string.scan(word.downcase).size
+    accum[word] = instances if instances.positive?
+    accum
+  end
 end
 
 dictionary = %w[
@@ -27,5 +24,6 @@ dictionary = %w[
   partner
   sit
 ]
-substrings('below', dictionary)
-substrings("Howdy partner, sit down! How's it going?", dictionary)
+
+puts substrings('below', dictionary)
+puts substrings("Howdy partner, sit down! How's it going?", dictionary)
