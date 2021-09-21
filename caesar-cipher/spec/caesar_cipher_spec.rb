@@ -12,4 +12,8 @@ describe '#caesar_cipher' do
   it 'returns the same string when no shift factor provided' do
     expect(caesar_cipher('What a string!')).to eql('What a string!')
   end
+
+  it 'works with an empty string' do
+    expect(caesar_cipher('', 10)).to eql('')
+  end
 end
