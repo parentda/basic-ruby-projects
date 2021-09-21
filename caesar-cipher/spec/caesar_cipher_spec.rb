@@ -30,4 +30,8 @@ describe '#caesar_cipher' do
   it 'accepts a string and a negative shift factor' do
     expect(caesar_cipher('What a string!', -15)).to eql('Hsle l dectyr!')
   end
+
+  it 'exhibits proper wrapping when the shift factor is greater than 26 in magnitude' do
+    expect(caesar_cipher('What a string!', 31)).to eql('Bmfy f xywnsl!')
+  end
 end
