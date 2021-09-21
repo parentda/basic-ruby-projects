@@ -16,4 +16,10 @@ describe '#caesar_cipher' do
   it 'works with an empty string' do
     expect(caesar_cipher('', 10)).to eql('')
   end
+
+  it 'ignores non-alphabetical characters in a string' do
+    expect(caesar_cipher('1234... What a string! 4321!@#$%', 5)).to eql(
+      '1234... Bmfy f xywnsl! 4321!@#$%'
+    )
+  end
 end
