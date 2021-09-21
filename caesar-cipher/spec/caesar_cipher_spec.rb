@@ -8,4 +8,8 @@ describe '#caesar_cipher' do
   it 'returns the same string when the shift factor is 0' do
     expect(caesar_cipher('What a string!', 0)).to eql('What a string!')
   end
+
+  it 'returns the same string when no shift factor provided' do
+    expect(caesar_cipher('What a string!')).to eql('What a string!')
+  end
 end
