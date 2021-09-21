@@ -22,4 +22,8 @@ describe '#caesar_cipher' do
       '1234... Bmfy f xywnsl! 4321!@#$%'
     )
   end
+
+  it 'accepts a string and a positive shift factor' do
+    expect(caesar_cipher('What a string!', 5)).to eql('Bmfy f xywnsl!')
+  end
 end
