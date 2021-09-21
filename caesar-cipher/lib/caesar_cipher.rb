@@ -1,4 +1,6 @@
 def caesar_cipher(string, shift_factor = 0)
+  return 'Invalid input format' unless string.is_a? String
+
   string
     .chars
     .map do |char|
